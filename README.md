@@ -3,11 +3,11 @@ The case study is about the problems faced by the customer and how big basked ca
 
 ## Table of Content
   * [Problem_Definition](#Problem_Definition)
+  * [DataSet Description](#Dataset_Description)
   * [Exploratory_Data_Analysis](#Exploratory_Data_Analysis)
   * [Data_Preprocessing](#Data_Preprocessing)
   * [Model_Building](#Model_Building)
   * [Result](#Result)
-  * [Business_Recommendation](#Business_Recommendation)
   * [Credit](#Credit)
   
 
@@ -17,7 +17,13 @@ The case study is about the problems faced by the customer and how big basked ca
 
  If the Smart Basket option is not used customers tend to forget to buy all the required items. Therefore, the 'Did you forget' feature was introduced using an analytics solution. This feature was conceived, providing product recommendations while checking out based on the purchase history of the customer. The 'Did you forget' use case is a unique problem to solve the input to derive the recommendation looks primarily at the items in the basket and the customer's purchase history. It does not get buying history or patterns for other similar customer profiles. The problem statement is specific to the situation where the customer has already filled the basket and is ready to checkout. These features can be improvised upon.
  
- 
+## Dataset_Description
+The dataset consist of foloowing attributes:
+1. Member - Customer ID
+2. Order - Order ID 
+3. SKU - Transaction ID
+4. Created On - Transaction date and time
+5. Description - Description of Order Items 
    
 ## Exploratory_Data_Analysis
 * List top 10 Frequent Analysis
@@ -36,41 +42,24 @@ The case study is about the problems faced by the customer and how big basked ca
 Min Support = 0.02
 Since the products below the minimum support are not bought frequently.
 
-<img src="/VIF.PNG" width="400">
+<img src="min%20support.PNG" width="400">
 
 
 
 ## Data_Preprocessing
-* Encoding the Status column as 1and 0
-* Dropping three features 'SLNO','Candidate Ref' and 'Location' dueto high cardinality
-* Applying Label Encoding to'offered band' ordinal feature.
-* Applying one hot encoding to restof the categorical features
-* Used drop_first feature of one hotencoding to avoidmulticollinearity
-* Checked for multicollinearity using correlation mapand variance Inflation factor,Two features 'Pecent hike expected in CTC' and'Percent hike offered in CTC' has been removed
-
-    <img src="/VIF.PNG" width="400">
+* Select Order and Decription_Order columns to build Apriori Algorithm using R.
 
 
 ## Model_Building
-* XG Boost performs better thanother models
-* Hyperparameters tuning isdone by RandomizedSearchCV for xgboost
-* It has a higher accuracy of83.24%
-* True Negative is almost doublethan false negative
-* Rest of the models have verypoor performance in terms ofpredicting true negative values
-* True negative values are crucialbecause it is important to knowwho will not join theorganization
+* To build Apirori Algorithm , defiend support and confidence  parameter  as 0.02 and 0.
 
-
-     <img src="/ModelComparison.PNG" width="400">
 
 ## Result
-* XG Boost classifieroutperforms here among all model with 83.24% accuracy
-* Feature importance score from XGBoost classifier
-* Top 3 important features = 'Percent difference CTC', 'Duration to accept offer', 'Age'
-* Least 3 important features = 'Joining Bonus_Yes', 'LOB_EAS', 'LOB_Healthcare'
+Here is the result of Apriori Algorithm.
 
-## Business_Recommendation
-* Firm should focus on 3 important features 'Percent difference CTC', 'Duration to accept offer'& 'Age'
-* Firm should introduce new offering/schemes  based on these 3 features combination so that attrition rate can reduce.
+<img src="Apriori%20Algorithm.PNG" width="400">
+
+
 
 ## Credit
-[dare2Compete](https://https://dare2compete.com/) - This project has been done on this competitive platform.
+ This project has been done as a course learning project at my College .
