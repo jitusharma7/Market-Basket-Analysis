@@ -1,5 +1,5 @@
 # Market-Basket-Analysis
-The case study is about the problems faced by the customer and how big basked can optimize its performance while placing the orders on the big basket mobile app.
+The case study is about the problems faced by the customer and how a big basket can optimize its performance while placing the orders on the big basket mobile app.
 
 ## Table of Content
   * [Problem_Definition](#Problem_Definition)
@@ -18,7 +18,7 @@ The case study is about the problems faced by the customer and how big basked ca
  If the Smart Basket option is not used customers tend to forget to buy all the required items. Therefore, the 'Did you forget' feature was introduced using an analytics solution. This feature was conceived, providing product recommendations while checking out based on the purchase history of the customer. The 'Did you forget' use case is a unique problem to solve the input to derive the recommendation looks primarily at the items in the basket and the customer's purchase history. It does not get buying history or patterns for other similar customer profiles. The problem statement is specific to the situation where the customer has already filled the basket and is ready to checkout. These features can be improvised upon.
  
 ## Dataset_Description
-The dataset consist of foloowing attributes:
+The dataset consist of the foloowing attributes:
 1. Member - Customer ID
 2. Order - Order ID 
 3. SKU - Transaction ID
@@ -31,7 +31,7 @@ The dataset consist of foloowing attributes:
 2. Root vegetables
 3. Beans
 4. Gourd & cucumber
-5. Brnjals
+5. Brinjals
 6. Banana
 7. Other Dals
 8. Whole spices
@@ -51,15 +51,15 @@ Since the products below the minimum support are not bought frequently.
 
 
 ## Model_Building
-* To build Apirori Algorithm , defiend support and confidence  parameter  as 0.02 and 0.
+* To build Apriori Algorithm, defined support and confidence parameters as 0.02 and 0.
 
 
 ## Result
-Here is the result of Apriori Algorithm.
+Here is the result of the Apriori Algorithm.
 
 <img src="Apriori%20Algorithm.PNG" width="400">
 
 
 
 ## Credit
- This project has been done as a course learning project at my College .
+ This project has been done as a course learning project at my College.
